@@ -1,0 +1,115 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions":
+    [
+        {
+            "command":
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command":
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{1ae4e768-6688-4ff9-8960-0bf0de98d548}",
+    "newTabMenu":
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles":
+    {
+        "defaults":
+        {
+            "colorScheme": "Andromeda"
+        },
+        "list":
+        [
+            {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "\uba85\ub839 \ud504\ub86c\ud504\ud2b8"
+            },
+            {
+                "closeOnExit": "always",
+                "commandline": "\"%HOMEDRIVE%\\cygwin64\\bin\\zsh.exe\" -l -c \"cd $OLDPWD; exec /bin/zsh\"",
+                "font":
+                {
+                    "face": "CaskaydiaCove Nerd Font Mono",
+                    "size": 11.0
+                },
+                "guid": "{1ae4e768-6688-4ff9-8960-0bf0de98d548}",
+                "hidden": false,
+                "icon": null,
+                "name": "Cygwin"
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": true,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+            }
+        ]
+    },
+    "schemes":
+    [
+        {
+            "background": "#262A33",
+            "black": "#000000",
+            "blue": "#2472C8",
+            "brightBlack": "#666666",
+            "brightBlue": "#2472C8",
+            "brightCyan": "#0FA8CD",
+            "brightGreen": "#05BC79",
+            "brightPurple": "#BC3FBC",
+            "brightRed": "#CD3131",
+            "brightWhite": "#E5E5E5",
+            "brightYellow": "#E5E512",
+            "cursorColor": "#F8F8F0",
+            "cyan": "#0FA8CD",
+            "foreground": "#E5E5E5",
+            "green": "#05BC79",
+            "name": "Andromeda",
+            "purple": "#BC3FBC",
+            "red": "#CD3131",
+            "selectionBackground": "#5A5C62",
+            "white": "#E5E5E5",
+            "yellow": "#E5E512"
+        }
+    ],
+    "themes": []
+}
