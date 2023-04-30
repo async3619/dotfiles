@@ -1,0 +1,11 @@
+/projects
+/.bash*
+/.profile
+/*.zwc
+/.zsh_history
+/.inputrc
+/.p10k.zsh
+/apt-cyg
+/.wget-hsts
+/.zcompdump*
+/traefik-local
