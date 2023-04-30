@@ -12,6 +12,9 @@ if [ ! -s ~/.github_token ]; then
     exit 1
 fi
 
+# get randomized temporary directory name
+RANDOM_DIR=$(mktemp -d -t github-runner-XXXXXXXXXX)
+
 # read the token from ~/.github_token
 ACCESS_TOKEN=$(cat ~/.github_token)
 GITHUB_ORG=$1
@@ -19,13 +22,13 @@ GITHUB_ORG=$1
 docker run -d --restart always --name github-runner \
   -e RUNNER_NAME_PREFIX="async3619-runner" \
   -e ACCESS_TOKEN="${ACCESS_TOKEN}" \
-  -e RUNNER_WORKDIR="/tmp/github-runner-your-repo" \
+  -e RUNNER_WORKDIR="${RANDOM_DIR}" \
   -e RUNNER_GROUP="Default" \
   -e RUNNER_SCOPE="org" \
   -e DISABLE_AUTO_UPDATE="true" \
   -e ORG_NAME="${GITHUB_ORG}" \
   -e LABELS="home" \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  -v /tmp/github-runner-your-repo:/tmp/github-runner-your-repo \
+  -v ${RANDOM_DIR}:${RANDOM_DIR} \
   myoung34/github-runner:latest
 
