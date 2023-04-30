@@ -9,3 +9,4 @@
 /.wget-hsts
 /.zcompdump*
 /traefik-local
+/.github_token

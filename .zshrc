@@ -13,4 +13,7 @@ alias ws="/cygdrive/c/Users/user/AppData/Local/JetBrains/Toolbox/scripts/webstor
 alias ri="/cygdrive/c/Users/user/AppData/Local/JetBrains/Toolbox/scripts/rider.cmd"
 alias ii="explorer.exe"
 
+alias github="~/scripts/github-pat.sh"
+alias runner="~/scripts/github-runner.sh"
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
