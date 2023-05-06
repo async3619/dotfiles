@@ -30,5 +30,6 @@ docker run -d --restart always --name github-runner \
   -e LABELS="home" \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -v ${RANDOM_DIR}:${RANDOM_DIR} \
+  --name "${GITHUB_ORG}" \
   myoung34/github-runner:latest
 
